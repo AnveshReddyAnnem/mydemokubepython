@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anveshmydemokubepython 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anveshmydemokubepython
+  template:
+    metadata:
+      labels:
+        app: anveshmydemokubepython 
+    spec:
+      containers:
+        - name: anveshmydemokubepython 
+          image: anveshacr.azurecr.io/anveshmydemokubepython
+          ports:
+          - containerPort: 8000
